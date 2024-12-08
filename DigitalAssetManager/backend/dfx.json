@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "DigitalAssetManager": {
+      "type": "motoko",
+      "src": "src/DigitalAssetManager",
+      "main": "main.mo",
+      "dependencies": []
+    },
+    "frontend": {
+      "type": "assets",
+      "source": "frontend"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": [ "https://ic0.app" ],
+      "type": "persistent"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "version": 1
+}

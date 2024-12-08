@@ -1,0 +1,21 @@
+{
+  "name": "digital-asset-manager",
+  "version": "1.0.0",
+  "description": "Dijital varlýk yönetimi için Motoko backend ve basit frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^0.13.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.0",
+    "babel-loader": "^9.1.2",
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20"
+  }
+}

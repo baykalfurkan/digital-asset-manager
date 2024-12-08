@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Asset Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Digital Asset Manager</h1>
+    </header>
+    <main>
+        <section id="create-asset">
+            <h2>Create a New Asset</h2>
+            <input type="text" id="ipfsHash" placeholder="IPFS Hash" />
+            <input type="text" id="metadata" placeholder="Metadata" />
+            <button id="createAssetBtn">Create Asset</button>
+        </section>
+
+        <section id="user-assets">
+            <h2>Your Assets</h2>
+            <button id="loadAssetsBtn">Load My Assets</button>
+            <ul id="assetsList"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
