@@ -74,7 +74,7 @@ actor DigitalAssetManager {
                 };
 
                 assets.put(assetId, newAsset);
-                transfers := Array.append(transfers, Array.make(transfer));
+                transfers := Array.append(transfers, [transfer]);
                 
                 return true;
             };
@@ -91,7 +91,7 @@ actor DigitalAssetManager {
         var userAssets: [Asset] = [];
         for ((id, asset) in assets.entries()) {
             if (asset.owner == user) {
-                userAssets := Array.append(userAssets, Array.make(asset));
+                userAssets := Array.append(userAssets, [asset]);
             };
         };
         userAssets
