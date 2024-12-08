@@ -5,26 +5,26 @@ import { idlFactory as digitalAssetManagerIdl } from "../../src/declarations/Dig
 
 const canisterId = "CANISTER_ID"; 
 
-// HttpAgent ve Actor oluþturma
+// HttpAgent ve Actor oluÃ¾turma
 const agent = new HttpAgent();
 const digitalAssetManager = Actor.createActor(digitalAssetManagerIdl, {
     agent,
     canisterId,
 });
 
-// Kullanýcýdan varlýk oluþturma
+// Kullanicidan varlik olusturma
 document.getElementById("createAssetBtn").addEventListener("click", async () => {
 
     const ipfsHash = document.getElementById("ipfsHash").value;
     const metadata = document.getElementById("metadata").value;
 
-    // Giriþlerin boþ olup olmadýðý kontrol
+    // girislerin bos olup olmadigini kontrol et
     if (!ipfsHash || !metadata) {
         alert("Please fill in all fields.");
         return;
     }
 
-    //  yeni varlýk oluþturma
+    //  yeni varlik oluÃ¾turma
     try {
         const assetId = await digitalAssetManager.createAsset(ipfsHash, metadata);
         alert(`Asset created successfully with ID: ${assetId}`);
@@ -34,15 +34,14 @@ document.getElementById("createAssetBtn").addEventListener("click", async () => 
     }
 });
 
-// varlýklarý yükleme ve listeleme
+// varliklari yÃ¼kleme ve listeleme
 document.getElementById("loadAssetsBtn").addEventListener("click", async () => {
     try {
-        //  Principal'ýný al
         const userPrincipal = await agent.getPrincipal();
 
         const assets = await digitalAssetManager.getUserAssets(userPrincipal);
 
-        // Listeyi temizleme ve varlýklarý listeleme
+        // Listeyi temizleme ve varlikleri listeleme
         const assetsList = document.getElementById("assetsList");
         assetsList.innerHTML = ""; 
 
