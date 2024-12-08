@@ -4,7 +4,7 @@
 ## Özellikler
 
 - Dijital varlık oluşturma
-- Varlık transferi (sahip değiştirme)
+- Varlık transferi
 - Varlık bilgilerini sorgulama
 - Kullanıcı bazında varlık listeleme
 - Varlık transfer geçmişi sorgulama
@@ -12,6 +12,7 @@
 
 
 ### Kullanım
+Aşağıdaki komutları kullanarak projenin sağladığı işlevleri deneyebilirsiniz:
 
 1. **Varlık oluşturma:**
 
